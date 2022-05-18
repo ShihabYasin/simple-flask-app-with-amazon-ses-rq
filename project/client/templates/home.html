@@ -1,0 +1,45 @@
+{% extends '_base.html' %}
+{% from 'bootstrap/form.html' import render_form %}
+{% block content %}
+
+  <header class="content-header">
+    <h1>Flask + Redis Queue + Amazon SES</h1>
+    <hr><br>
+  </header>
+
+  <br>
+
+  <div class="col-sm-6">
+    {{ render_form(form, button_style='primary') }}
+  </div>
+
+  <br><br>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Registered Users</h3>
+      <br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Confirm Email Sent?</th>
+            <th>Confirmed?</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for user in users %}
+            <tr>
+              <td>{{user.id}}</td>
+              <td data-user="{{user.id}}">{{user.email}}</td>
+              <td data-user="{{user.id}}" data-field="sent">{{user.email_sent}}</td>
+              <td data-user="{{user.id}}" data-field="confirm">{{user.confirmed}}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
