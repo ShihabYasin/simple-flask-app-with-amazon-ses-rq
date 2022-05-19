@@ -4,9 +4,6 @@
 
 PATH_REPO=$1
 str=$2
-echo $str
-str="${str//_/ }"
-echo $str
 
 git remote set-url origin git@github.com:$1
 
@@ -14,6 +11,6 @@ git remote set-url origin git@github.com:$1
 git add .
 
 currentDate=`date +"%Y-%m-%d %T"`
-git commit -m  "${str}"
+git commit -m  "Updating the doc"
 git pull origin master
 git push origin master

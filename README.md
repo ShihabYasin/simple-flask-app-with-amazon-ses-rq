@@ -1,12 +1,7 @@
-# Sending confirmation Emails with Flask, Redis Queue, and Amazon SES
 
-Send confirmation emails to newly registered users with Flask, Redis Queue, and Amazon SES
+# How to send confirmation emails to newly registered users with Flask, Redis Queue, and Amazon SES
 
-### Want to learn how to build this?
-
-Check out the [post](https://testdriven.io/sending-confirmation-emails-with-flask-rq-and-ses).
-
-## Want to use this project?
+## Usage: 
 
 1. Fork/Clone
 
